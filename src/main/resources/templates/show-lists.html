@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
+   <head>
+     <title>Spring Boot App</title>
+   </head>
+   <body>
+     <h1>List Descending by method Demo...</h1>
+     <table>
+	      <tr th:each="human: ${#lists.sort(humans, byWeightDesc)}">
+	     	<td> <span th:text="${human.name}"></span></td>
+	     	<td> <span th:text="${human.weight}"></span>
+	      </tr>
+      </table>
+</body>
+</html>
